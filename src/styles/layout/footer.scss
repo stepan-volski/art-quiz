@@ -1,0 +1,30 @@
+footer {
+  background-color: black;
+  color: rgb(158, 150, 150);
+  padding: 5px;
+
+  font-size: 12px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rssLogo{
+  height: 40px;
+  width: 60px;
+  background: url("./assets/img/rs-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  //background-repeat: no-repeat;
+}
+
+a:visited{
+  color: rgb(158, 150, 150);
+}
+
+a:link {
+  text-decoration: none;
+}

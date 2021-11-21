@@ -1,0 +1,44 @@
+.button {
+  width: 300px;
+  height: 60px;
+  border: 1px solid white;
+  border-radius: 25px;
+  text-align: center;
+  background: none;
+
+  //font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  color: white;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: $pink;
+    color: black;
+  }
+}
+
+.round-button {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: $pink;
+    color: black;
+  }
+}

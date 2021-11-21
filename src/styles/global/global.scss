@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  flex: 1; // this div will fill all available screen height
+  display: flex;
+  justify-content: center;
+}
+
+.hidden{
+  display: none;
+}

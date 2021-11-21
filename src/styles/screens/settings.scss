@@ -1,0 +1,46 @@
+.settings-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 50px 80px;
+}
+
+.settings-screen h2 {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+.settings-header__title {
+  min-height: 30px;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+
+  .back {
+    width: 10px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 15px;
+    background: url("./assets/svg/back.svg") center/cover;
+    cursor: pointer;
+  }
+}
+
+.settings-close {
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+
+.settings-buttons{
+  margin-top: 40px;
+}

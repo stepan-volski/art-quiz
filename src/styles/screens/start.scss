@@ -1,0 +1,37 @@
+.start-screen {
+  height: 100%;
+  background: url("./assets/img/bg-main.jpg") center/cover, rgba(0, 0, 0, 0.5);
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.start-screen__logo {
+  width: 440px;
+  height: 165px;
+  background: url("./assets/svg/logo-main.svg") center/cover;
+}
+
+.settings-icon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: url("./assets/svg/settings.svg") center/cover;
+  cursor: pointer;
+}
+
+.start-screen__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    margin: 0 30px;
+  }
+}

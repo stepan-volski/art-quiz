@@ -1,0 +1,21 @@
+//global
+@import './styles/global/vars.scss';
+@import './styles/global/global.scss';
+
+//components
+@import './styles/components/button.scss';
+@import './styles/components/close-icon.scss';
+@import './styles/components/modal.scss';
+
+//layout
+@import './styles/layout/header.scss';
+@import './styles/layout/footer.scss';
+
+//screens
+@import './styles/screens/start.scss';
+@import './styles/screens/main.scss';
+@import './styles/screens/settings.scss';
+@import './styles/screens/question.scss';
+@import './styles/screens/answer.scss';
+@import './styles/screens/score.scss';
+@import './styles/screens/congratulations.scss';

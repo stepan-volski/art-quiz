@@ -1,0 +1,50 @@
+.answer {
+  width: 450px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#answer-icon {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+
+.modal-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.painting-title {
+  font-size: 26px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.painting-author {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  padding: 10px;
+}
+
+.answer-button{
+  color: black;
+  border: 1px solid black;
+  width: 250px;
+  height: 50px;
+
+  &:hover {
+    background-color: $pink;
+  }
+}
