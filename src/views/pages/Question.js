@@ -55,6 +55,9 @@ let Question = {
     }
     , after_render: async () => {
 
+        document.getElementById("header").classList.remove('hidden');
+        document.getElementById("footer").classList.remove('hidden');
+
         let answers = Array.from(document.getElementsByClassName("answer-option"));
         answers.forEach(answer => answer.onclick = checkAnswer);
 
@@ -93,6 +96,16 @@ let Question = {
             localStorage.setItem(`${quiz_type}_category${categoryId}`, JSON.stringify(storedCategory));
 
             displayAnswerWindow();
+            playAudio(iconType);
+        }
+
+        function playAudio(type){
+            if (localStorage.getItem("isSoundEnabled") === "true") {
+                let url = `../assets/sound/${type}.mp3`;
+                let audio = new Audio(url);
+                audio.volume = localStorage.getItem("appVolume") / 100 || 0.5;
+                audio.play();
+            }
         }
 
         document.getElementById("next").onclick = nextQuestion;
@@ -100,6 +113,7 @@ let Question = {
         function nextQuestion() { 
             if (isLastQuestion) {
                 hideAnswerWindow();
+                playAudio("end-of-round");
                 document.getElementById("congrats").style.display = "flex";
                 document.getElementById("final-score").innerText = `Your score is ${storedCategory.score}/10`;
             } else {

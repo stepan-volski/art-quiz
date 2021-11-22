@@ -1,5 +1,9 @@
 let Settings = {
     render : async () => {
+    
+    let appVolume = localStorage.getItem("appVolume") || 50;
+    let isSoundEnabled = localStorage.getItem("isSoundEnabled") || false;
+
         let view =  /*html*/`
         <section class="settings-screen">
         <div class="settings-header">
@@ -7,16 +11,15 @@ let Settings = {
                 <div class="back" id="settings-back"></div>
                 <span>Settings</span>
             </div>
-            <div class="settings-close close-icon" id="settings-close"></div>
         </div>
         <div class="settings-controls">
             <div class="settings-controls__volume">
                 <h2>Volume</h2>
-                <input type="range" id="vol" name="vol" min="0" max="100">
+                <input type="range" id="volumeRng" min="0" max="100" value="${appVolume}">
             </div>
             <div class="settings-controls__time-game">
-                <h2>Time game</h2>
-                <input type="checkbox" id="time-game">
+                <h2>Enable Sound</h2>
+                <input type="checkbox" id="volumeChkbx" ${isSoundEnabled === "true" ? "checked" : ""}>
             </div>
             <div class="settings-controls__time-to-answer">
                 <h2>Time to answer</h2>
@@ -26,8 +29,7 @@ let Settings = {
             </div>
         </div>
         <div class="settings-buttons">
-            <button class="button">Default</button>
-            <button class="button">Save</button>
+            <button class="button" id="save">Save</button>
         </div>
     </section>
         `
@@ -39,15 +41,21 @@ let Settings = {
         document.getElementById("footer").classList.add('hidden');
 
         let backBtn = document.getElementById("settings-back");
-        let closeBtn = document.getElementById("settings-close");
-
         backBtn.addEventListener('click', () => {
             history.back();
         });
 
-        closeBtn.addEventListener('click', () => {
+        document.getElementById("save").onclick = saveSettings;
+
+        function saveSettings(){
+            let volumeValue = document.getElementById("volumeRng").value;
+            let isSoundEnabled = document.getElementById("volumeChkbx").checked;
+
+            localStorage.setItem("appVolume", volumeValue);
+            localStorage.setItem("isSoundEnabled", isSoundEnabled);
+
             history.back();
-        });
+        }
 
 
     }
